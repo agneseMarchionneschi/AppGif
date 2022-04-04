@@ -97,14 +97,6 @@ public trend : boolean = false
   }
 
 
-  // sort(value:any){
-  //   if(value)
-  //   this.images.sort((a, b) => new Date(a.import_datetime).getTime() - new Date(b.import_datetime).getTime());
-  //   else
-
-  //   this.images.sort((a, b) => new Date(b.import_datetime).getTime() - new Date(a.import_datetime).getTime());
-
-  // }
 
 
   getGif(selected:string,page: { pageSize: number; offset: number; }){
@@ -137,8 +129,6 @@ public trend : boolean = false
       },
     })
   }
-
-
   onLoad() {
     this.loading = false;
 }
