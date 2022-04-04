@@ -1,0 +1,12 @@
+<mat-card class="titl" ><h2>My favorite Gifs </h2></mat-card>
+  <div class="container">
+  <div *ngFor="let image of favoriteList"
+        class="title">
+
+
+
+      <img [src]="image.images.fixed_width.url" [alt]="image.title">  <button mat-icon-button  class="example-icon"  aria-label="Example icon-button with share icon">    <mat-icon>favorite</mat-icon>
+      </button>
+</div>
+</div>
+

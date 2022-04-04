@@ -1,0 +1,23 @@
+
+<p>
+  <mat-toolbar class="bar" color="primary">
+<mat-icon>gif</mat-icon>
+    <span>GIPHYAPP</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button  matTooltip="Home" routerLink = "/" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button  matTooltip="Favorites Gifs"  mat-icon-button class="example-icon"  routerLink = "/favorites" aria-label="Example icon-button with share icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+
+  </mat-toolbar>
+
+</p>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+

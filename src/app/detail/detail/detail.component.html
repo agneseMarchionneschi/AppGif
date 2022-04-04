@@ -1,0 +1,13 @@
+<div class="box">
+<mat-spinner *ngIf="loading" mode="indeterminate" color="primary" ></mat-spinner>
+<img  [hidden]="loading" (load)="onLoad()" [src]="giph.images.downsized.url" [alt]="giph.title">
+
+</div>
+<div class="box">
+<mat-list role="list">
+  <mat-list-item class="listt" role="listitem"><b>Title: &nbsp;</b> {{giph?.title}}</mat-list-item>
+  <mat-list-item role="listitem"><b>Creator: &nbsp; </b>{{giph.user?.display_name}}</mat-list-item>
+  <mat-list-item role="listitem"><b>Added: &nbsp;</b> {{giph?.import_datetime}}</mat-list-item>
+  <mat-list-item role="listitem"><b>Rating: &nbsp;</b>{{giph?.rating }}</mat-list-item>
+</mat-list>
+</div>

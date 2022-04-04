@@ -1,0 +1,37 @@
+<div class="contenitore">
+
+  <mat-card>
+    <mat-form-field appearance="outline">
+      <input type="text" [(ngModel)]="searchTerm" matInput placeholder="Search">
+    </mat-form-field>
+
+
+<mat-form-field class="filter" appearance="outline">
+  <mat-label>Sort By:</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option value="none">None</mat-option>
+    <mat-option value="asc">Recent uploaded</mat-option>
+    <mat-option value="desc">Older uploaded</mat-option>
+  </mat-select>
+</mat-form-field>
+<button mat-icon-button (click)="search()"class="example-icon"  aria-label="Example icon-button with share icon">
+  <mat-icon>search</mat-icon>
+  </button>
+
+
+</mat-card>
+<mat-card class="titl" *ngIf="trend==true"><h2>The most popular 10 gifs </h2></mat-card>
+  <div class="container">
+  <div *ngFor="let result of images "class="title">
+
+        <mat-spinner *ngIf="loading" mode="indeterminate" color="primary"   diameter="32"></mat-spinner>
+
+
+      <img [hidden]="loading" (load)="onLoad()" class="immagine" (click)="openDetail(result)" [src]="result.images.fixed_width.url" [alt]="result.title">  <button mat-icon-button (click)="addFav(result)"class="example-icon"  aria-label="Example icon-button with share icon">    <mat-icon>favorite</mat-icon>
+      </button>
+</div>
+</div>
+</div>
+
+
+
