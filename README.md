@@ -1,12 +1,15 @@
-# GiphyApp
-L'applicazione ha una struttura semplice ed essenziale. All'avvio mostra le dieci Gif più "trend", ottenute con l'apposita chiamata all'API, permette all'utente di effettuare la ricerca di Gifs dando una stringa in input e premendo il pulsante con l'icona della ricerca. 
-
-Lo scorrimento delle Gifs è gestito con un Infinite Scroll che dinamicamente carica tutti gli elementi che vengono restituiti dopo aver premuto il pulsante di ricerca. Vi è la possibilità di aggiungere le Gifs ad una lista preferiti, per eseguire questo task ho fatto uso del Local Storage. Cliccando su una Gif si aprirà un dialog per visualizzare il dettaglio della Gif selezionata. 
-
-
-Sono riuscita a implementare la logica per dare all'utente la possibilità di ordinare le Gifs ricercate sulla base della data di Upload ascendente oppure discendente, è infatti presente l'input per la selezione nell'interfaccia, una volta selezionato il parametro di ricerca occorre cliccare sull'icona di ricerca.
-
-Per realizzare l'interfaccia utente dell'applicazione, ho utilizzato la libreria Angular Material, dal momento che offre elementi versatili e di qualità, utili allo scopo di comporre rapidamente un'interfaccia.
+Project
+Build a frontend UI that displays the GIFs from Giphy (https://giphy.com/) using Angular. A user visiting the website should be able to search for GIFs and see the list of results.
+A visitor should be able to expand a GIF to see its details (user, rating, create and update date-time, or whatever you think is relevant).
+When a visitor scrolls the page to the bottom, new GIFs are loaded automatically.
+Create a mosaic layout and display a placeholder image when a GIF is still loading.
+Give the visitor the possibility to sort GIFs by ascending or descending uploaded time.
+Let the visitor mark some GIFs as “Favourites”: he should be able to retrieve their favorites GIFs in a “My Favorites” view, even after refreshing the page.
+Provide a good user experience and pleasant UI.
+Notes
+Use the Giphy API endpoints: https://developers.giphy.com/docs/api/endpoint.
+You can obtain an API key for your app creating a simple account and accessing the Giphy
+Developer Dashboard: https://developers.giphy.com/dashboard/
 
 ##  Testing
 Per testare l'applicazione è sufficiente lanciare`npm install`, successivamente `ng serve` e navigare su `http://localhost:4200/`
